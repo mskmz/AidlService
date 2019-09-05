@@ -16,6 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".AidlService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.mskmz.service.action" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </service>
     </application>
 
 </manifest>

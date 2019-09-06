@@ -3,7 +3,7 @@ package com.wzk.aidlservice
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import com.wzk.aidlservice.java.AidlService
 
 class MainActivity : AppCompatActivity() {
 

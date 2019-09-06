@@ -1,4 +1,4 @@
-package com.wzk.aidlservice;
+package com.wzk.aidlservice.java;
 
 import android.os.RemoteException;
 import android.util.Log;
@@ -10,9 +10,9 @@ public class IServiceBinder extends com.wzk.aidlservice.IService.Stub {
     //---------------DEBUG配置-------------------------------------------------------
     private static final String TAG = "IServiceBinder";
     private static final boolean DEBUG = true;
-    private com.wzk.aidlservice.ICallBack ICallBack;
+    private com.wzk.aidlclient.ICallBack ICallBack;
 
-    public void setICallBack(com.wzk.aidlservice.ICallBack ICallBack) {
+    public void setICallBack(com.wzk.aidlclient.ICallBack ICallBack) {
         this.ICallBack = ICallBack;
     }
 
@@ -35,12 +35,12 @@ public class IServiceBinder extends com.wzk.aidlservice.IService.Stub {
 
     @Override
     public void cmd1() throws RemoteException {
-        mCallBack.onCallBack(CmdConstance.CMD_1);
+        mCallBack.onCallBack(getCallingPid());
     }
 
     @Override
     public void cmd2() throws RemoteException {
-        mCallBack.onCallBack(CmdConstance.CMD_2);
+        mCallBack.onCallBack(getCallingUid());
 
     }
 
@@ -68,7 +68,7 @@ public class IServiceBinder extends com.wzk.aidlservice.IService.Stub {
     }
 
     @Override
-    public void setCallBack(com.wzk.aidlservice.ICallBack icallBack) throws RemoteException {
+    public void setCallBack(com.wzk.aidlclient.ICallBack icallBack) throws RemoteException {
         ICallBack = icallBack;
     }
 

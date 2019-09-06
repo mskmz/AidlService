@@ -1,6 +1,6 @@
 // IService.aidl
 package com.wzk.aidlservice;
-import com.wzk.aidlservice.ICallBack;
+import com.wzk.aidlclient.ICallBack;
 // Declare any non-default types here with import statements
 interface IService {
      void cmd1();

@@ -1,5 +1,5 @@
 // ICallBack.aidl
-package com.wzk.aidlservice;
+package com.wzk.aidlclient;
 
 // Declare any non-default types here with import statements
 

@@ -35,6 +35,11 @@ public class IServiceBinder extends com.wzk.aidlservice.IService.Stub {
 
     @Override
     public void cmd1() throws RemoteException {
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         mCallBack.onCallBack(getCallingPid());
     }
 
